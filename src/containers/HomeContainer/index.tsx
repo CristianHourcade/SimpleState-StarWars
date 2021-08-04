@@ -66,9 +66,11 @@ const HomeContainer = () => {
                         )
                     })}
                 </div>
-                <div className="pagination">
-                    {navigationData.count > 10 && <PaginationComponent navigationData={navigationData} changePage={changePage} pageIndex={pageIndex} />}
-                </div>
+                {(querySearch === '' && navigationData.count > 10) &&
+                    <div className="pagination">
+                        <PaginationComponent navigationData={navigationData} changePage={changePage} pageIndex={pageIndex} />
+                    </div>
+                }
             </section>
         </>
     )
