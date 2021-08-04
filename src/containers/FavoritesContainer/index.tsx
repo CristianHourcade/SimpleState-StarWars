@@ -4,7 +4,6 @@ import { Planet } from "../../models/planet";
 import { ReduxState } from "../../models/reduxState";
 import { removeFromFavoriteList } from "../../redux/actions/planet";
 import CardComponent from "../../components/CardComponent";
-import PaginationComponent from "../../components/PaginationComponent";
 import HeaderComponent from "../../components/HeaderComponent";
 
 const FavoritesContainer = () => {

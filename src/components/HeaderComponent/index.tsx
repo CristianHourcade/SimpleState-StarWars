@@ -6,8 +6,8 @@ const HeaderComponent = (props: HeaderComponentProps) => {
         <header>
             <nav>
                 <ul>
-                    <li><Link to={'/'}><a href="#">Star Wars Test</a></Link></li>
-                    <li style={{ float: 'right', width: '300px' }}><Link  to={'/favorites'}><a className="active" href="#about">Ver Favoritos <b>{props.favoritePlanet.length}</b></a></Link></li>
+                    <li><Link to={'/'}><span>Star Wars Test</span></Link></li>
+                    <li style={{ float: 'right', width: '300px' }}><button className="active" style={{backgroundColor: "#0077ff",width: "300px"}}><Link  to={'/favorites'}>Ver Favoritos <b>{props.favoritePlanet.length}</b></Link></button></li>
                 </ul>
             </nav>
         </header>
