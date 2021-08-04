@@ -25,6 +25,7 @@ export const planetReducer = (state = INIT_STATE, action: PlanetAction) => {
                     ...state
                 }
             }
+            break;
         case "REMOVE_FROM_FAVORITE":
             const index = state.favoritePlanet.findIndex((element: Planet) => element.name === action.payload.name);
             if (index !== -1) {
@@ -32,6 +33,10 @@ export const planetReducer = (state = INIT_STATE, action: PlanetAction) => {
                 return {
                     ...state,
                     favoritePlanet: newFavoriteList
+                }
+            }else{
+                return {
+                    ...state
                 }
             }
         default:
